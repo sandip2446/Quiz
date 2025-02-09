@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Network Security Quiz</h1>
+        <div class="chapters">
+            <button id="chapter1" onclick="loadChapter(1)">Chapter 1</button>
+            <button id="chapter2" onclick="loadChapter(2)">Chapter 2</button>
+            <button id="chapter3" onclick="loadChapter(3)">Chapter 3</button>
+            <button id="chapter4" onclick="loadChapter(4)">Chapter 4</button>
+            <button id="chapter5" onclick="loadChapter(5)">Chapter 5</button>
+        </div>
+        <div id="quiz"></div>
+        <div class="navigation">
+            <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+            <button id="nextBtn" onclick="nextQuestion()">Next</button>
+            <button id="submitBtn" onclick="submitQuiz()">Submit</button>
+            <button id="clearBtn" onclick="clearQuiz()">Clear</button> <!-- New Clear Button -->
+            <button id="retryBtn" onclick="retryIncorrect()" style="display:none;">Retry Incorrect</button> <!-- Retry Incorrect Button -->
+            <select id="retryChapterSelect" onchange="retryIncorrectChapter()" style="display:none;"></select> <!-- Retry Chapter Dropdown -->
+        </div>
+        <div id="result" class="result-container"></div>
+        <div class="footer">
+            Designed by Sandip Acharya
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
